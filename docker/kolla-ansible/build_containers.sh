@@ -22,8 +22,7 @@ declare -a openstack_releases=($(echo $2| tr "," " "))
 fury_repo=$(echo $3)
 declare -a containers_to_build=($(echo $4))
 
-#commenting centos for kolla wallaby container build, as centos trilio-wlm container creation is having issue.
-#declare -a openstack_platforms=("centos" "ubuntu")
+#removing centos for kolla wallaby container build, as centos trilio-wlm container creation is having issue.
 declare -a openstack_platforms=("ubuntu")
 #horizon_cont_type required only for Yoga Horizon. Against Yoga, datamover and DMAPI are only source type, hence separate bifurcation not required
 declare -a horizon_cont_type=("source" "binary")
